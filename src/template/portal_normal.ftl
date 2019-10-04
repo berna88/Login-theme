@@ -10,8 +10,7 @@
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 
 
-        <link rel="stylesheet" type="text/css" href="css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="css/style1.css" />
+        
 		<script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
 
 
@@ -22,110 +21,32 @@
 
 <body class="${css_class} page">
 
+<video autoplay muted loop id="myVideo">
+  <source src="${images_folder}/cuervo.mp4" type="video/mp4">
 
-<@liferay_ui["quick-access"] contentId="#main-content" />
+</video>
 
-<@liferay_util["include"] page=body_top_include />
+<div id="video-content" class="content row">
 
-<@liferay.control_menu />
-
-
-    </head>
-    <!--
-        <ul class="cb-slideshow">
-            <li><span>Image 01</span><div><h3></h3></div></li>
-            <li><span>Image 02</span><div><h3></h3></div></li>
-            <li><span>Image 03</span><div><h3></h3></div></li>
-            <li><span>Image 04</span><div><h3></h3></div></li>
-            <li><span>Image 05</span><div><h3></h3></div></li>
-            <li><span>Image 06</span><div><h3></h3></div></li>
-        </ul>
-
--->
-
-<a href="${site_default_url}">
-<img   src="${site_logo}" style="background-color: transparent; max-width: 300px; padding: 15px; position: absolute; top: 5%; z-index: 2; opacity: 0.8; border-radius: 20px;"/>
+   <div id="log"class="col-md-12">
+    <div>
+    <a href="${site_default_url}">
+<img   src="${images_folder}/cuervo_login.png" style="background-color: transparent; max-width: 300px; padding: 15px; position: absolute; top: 5%; z-index: 2; opacity: 0.8; border-radius: 20px;"/>
 </a>
+</div>
+</div>
+    <div id="con-login" class="d-flex text-center align-items-center col-md-12">
+      
 
-<div id="fady" style="position:absolute; z-index: 2;  top: 31%; left: 39%;" >
-<@liferay_portlet["runtime"]
-defaultPreferences=default_preferences
-portletName="com.liferay.login.web.portlet"
-
+ <@liferay_portlet["runtime"]
+    defaultPreferences="${freeMarkerPortletPreferences}"
+    portletName="com_liferay_login_web_portlet_LoginPortlet"
 />
 
-<!--
-
-    com_liferay_login_web_portlet_LoginPortlet
-<img   src="${images_folder}/TLOC/TLOC-logo-side.png" style=" position:absolute; z-index: 2; top: -15%; left: -150%;"/>
--->
+        
+    </div>
 
 </div>
-
-
-
-<script src="http://www.youtube.com/player_api"></script>
-
-
-
-
-<div class="video-foreground" id="player"></div>
-
-
-
-<script>
-var player;
-
-
-function onYouTubePlayerAPIReady() {
-player = new YT.Player('player', {
-playerVars: {
-'autoplay': 1,
-'controls': 0,
-'wmode': 'opaque',
-'showinfo': 0,
-'loop': 1,
-'start':4,
-'end':56,
-'mute': 1,
-'rel': 0,
-'playlist': 'KtngitG6W2E',
-'wmode': 'transparent'
-},
-videoId: 'KtngitG6W2E',
-events: {
-'onReady': onPlayerReady
-}
-});
-
-}
-
-function onPlayerReady(event) {
-player.setPlaybackRate(0.8);
-event.target.mute();
-
-//why this? Well, if you want to overlay text on top of your video, you
-//will have to fade it in once your video has loaded in order for this
-//to work in Safari, or your will get an origin error.
-}
-
-//this pauses the video when it's out of view, just wrap your video in .m-//video
-$(window).scroll(function() {
-var hT = $('.m-video').height(),
-wS = $(this).scrollTop();
-if (wS > hT) {
-player.pauseVideo();
-}
-else {
-player.playVideo();
-}
-});
-</script>
-
-
-
-
-
 
 
 <@liferay_util["include"] page=body_bottom_include />
