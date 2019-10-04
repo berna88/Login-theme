@@ -47,7 +47,9 @@
     </div>
 
 </div>
-
+<script>
+alert("hola");
+</script>
 
 <@liferay_util["include"] page=body_bottom_include />
 

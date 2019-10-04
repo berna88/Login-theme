@@ -9,11 +9,12 @@ color: white;
   color: white;
 }
 #portlet_com_liferay_login_web_portlet_LoginPortlet .portlet-content{
-  background: black;
+  background: transparent;
   width: 20rem;
   display: block;
   margin: auto;
   border-radius: 10px;
+  border: solid 1px white;
 }
 #portlet_com_liferay_login_web_portlet_LoginPortlet button{
   width: 100%;
