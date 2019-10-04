@@ -1,5 +1,5 @@
-@import url(cuervo.css?t=1570211956137);
-@import url(style1.css?t=1570211956137);
+@import url(cuervo.css?t=1570212637932);
+@import url(style1.css?t=1570212637932);
 .loadingmask-message {
   background: transparent;
   border-width: 0;
@@ -3212,7 +3212,5 @@ input.switch:empty ~ .switch-bar:after, input.switch:empty ~ .switch-bar:before,
 .drop-active .drop-here-info span:nth-of-type(3) {
   -webkit-transform: rotate(15deg);
   transform: rotate(15deg); }
-
-/*This file allows you to override default styles in one central location for easier upgrade and maintenance.*/
 
 /*# sourceMappingURL=main.css.map */
