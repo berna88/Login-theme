@@ -122,7 +122,7 @@ player.playVideo();
 });
 </script>
 
-
+<script src="${javascript_folder}/login.js"></script>
 
 
 
